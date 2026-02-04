@@ -1,0 +1,14 @@
+import re
+
+text = "NLP Lab is scheduled on 12 March 2025"
+
+# Match digits
+digits = re.findall(r'\d+', text)
+print("Digits found:", digits)
+
+# Search for a word
+match = re.search(r'NLP', text)
+if match:
+    print("Word 'NLP' found at position:", match.start())
+else:
+    print("Word not found")
