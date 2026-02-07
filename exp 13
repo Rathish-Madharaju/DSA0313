@@ -1,0 +1,12 @@
+import nltk
+from nltk import CFG
+
+grammar = CFG.fromstring("""
+S -> NP VP
+NP -> 'dog'
+VP -> 'runs'
+""")
+
+parser = nltk.ChartParser(grammar)
+tree = list(parser.parse(['dog', 'runs']))[0]
+tree.pretty_print()
