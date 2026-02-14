@@ -1,0 +1,10 @@
+sentence = "Can you help me?"
+
+if sentence.endswith("?"):
+    act = "Question"
+elif "please" in sentence.lower():
+    act = "Request"
+else:
+    act = "Statement"
+
+print("Dialog Act:", act)
